@@ -1,0 +1,5 @@
+# Security contact for Luanda Street Cape Town
+Contact: mailto:security@yourdomain.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, af, xh
+Canonical: https://yourdomain.com/.well-known/security.txt

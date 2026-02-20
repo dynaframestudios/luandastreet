@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Your Name
+Site: https://yourdomain.com
+Twitter: @yourhandle
+Location: Cape Town, South Africa
+
+/* THANKS */
+Thanks to all clients who trust Luanda Street Business Hub
+
+/* SITE */
+Last update: 2026
+Language: English
+Doctype: HTML5
+Colors: Red, White, Black
