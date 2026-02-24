@@ -224,13 +224,10 @@ const menuToggle = document.getElementById('menuToggle');
 
 // Initialize everything when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Page loaded, rendering services...'); // Debug line
+    console.log('Page loaded, rendering services...');
     
-    // Make sure elements exist before trying to fill them
     if (servicesGrid) {
         renderServices();
-    } else {
-        console.error('servicesGrid not found!');
     }
     
     if (serviceSelect) {
@@ -243,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setupEventListeners();
     updateCopyrightYear();
+    setupThemeToggle();
 });
 
 // Render all 13 service cards
@@ -251,7 +249,6 @@ function renderServices() {
     
     let html = '';
     
-    // Loop through all services and create HTML
     for (let i = 0; i < servicesData.length; i++) {
         const service = servicesData[i];
         html += `
@@ -266,7 +263,6 @@ function renderServices() {
                         <ul>
         `;
         
-        // Add all detail items
         for (let j = 0; j < service.details.items.length; j++) {
             html += `<li>${service.details.items[j]}</li>`;
         }
@@ -279,9 +275,7 @@ function renderServices() {
         `;
     }
     
-    // Insert the HTML into the page
     servicesGrid.innerHTML = html;
-    console.log('Services rendered: ' + servicesData.length); // Debug line
 }
 
 // Populate the dropdown in contact form
@@ -303,14 +297,12 @@ function populateFooterServices() {
     
     let html = '';
     
-    // Show first 5 services in footer
     for (let i = 0; i < 5; i++) {
         if (servicesData[i]) {
             html += `<li><a href="#services" onclick="scrollToService('${servicesData[i].title}')">${servicesData[i].title}</a></li>`;
         }
     }
     
-    // Add "View All" link
     html += '<li><a href="#services">View All 13 Services</a></li>';
     
     footerServicesList.innerHTML = html;
@@ -318,7 +310,6 @@ function populateFooterServices() {
 
 // Toggle service card open/close
 window.toggleService = function(card) {
-    // First close all other cards
     const allCards = document.querySelectorAll('.service-card');
     for (let i = 0; i < allCards.length; i++) {
         if (allCards[i] !== card) {
@@ -326,17 +317,15 @@ window.toggleService = function(card) {
         }
     }
     
-    // Then toggle the clicked card
     card.classList.toggle('active');
 };
 
-// Scroll to a specific service when clicked from footer
+// Scroll to a specific service
 window.scrollToService = function(serviceTitle) {
     const serviceCard = document.querySelector(`[data-service="${serviceTitle}"]`);
     if (serviceCard) {
         serviceCard.scrollIntoView({ behavior: 'smooth' });
         
-        // Highlight the card after scrolling
         setTimeout(function() {
             serviceCard.classList.add('active');
         }, 800);
@@ -345,14 +334,12 @@ window.scrollToService = function(serviceTitle) {
 
 // Set up all event listeners
 function setupEventListeners() {
-    // Mobile menu toggle
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
         });
     }
     
-    // Close mobile menu when clicking a link
     const navLinks = document.querySelectorAll('.nav-menu a');
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener('click', function() {
@@ -360,7 +347,6 @@ function setupEventListeners() {
         });
     }
     
-    // Smooth scrolling for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     for (let i = 0; i < anchorLinks.length; i++) {
         anchorLinks[i].addEventListener('click', function(e) {
@@ -378,7 +364,6 @@ function setupEventListeners() {
         });
     }
     
-    // Close expanded cards when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.service-card')) {
             const allCards = document.querySelectorAll('.service-card');
@@ -388,7 +373,6 @@ function setupEventListeners() {
         }
     });
     
-    // Map link click
     const mapLinks = document.querySelectorAll('.contact-item .contact-text');
     for (let i = 0; i < mapLinks.length; i++) {
         mapLinks[i].addEventListener('click', function() {
@@ -397,7 +381,6 @@ function setupEventListeners() {
         mapLinks[i].style.cursor = 'pointer';
     }
     
-    // Active nav link on scroll
     window.addEventListener('scroll', function() {
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-menu a');
@@ -423,7 +406,30 @@ function setupEventListeners() {
     });
 }
 
-// Update copyright year in footer
+// Theme toggle functionality
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+    
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else if (savedTheme === 'light') {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+// Update copyright year
 function updateCopyrightYear() {
     const footerText = document.querySelector('.footer-bottom p');
     if (footerText) {
@@ -431,29 +437,3 @@ function updateCopyrightYear() {
         footerText.innerHTML = footerText.innerHTML.replace('2024', currentYear);
     }
 }
-
-// Add a little CSS to make social icons look better
-const style = document.createElement('style');
-style.textContent = `
-    .top-bar-social a {
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        background-color: rgba(255,255,255,0.1);
-        border-radius: 50%;
-        text-align: center;
-        line-height: 28px;
-        transition: all 0.3s;
-    }
-    
-    .top-bar-social a:hover {
-        background-color: var(--accent-red);
-        transform: translateY(-2px);
-    }
-    
-    .top-bar-social i {
-        font-size: 14px;
-        color: white;
-    }
-`;
-document.head.appendChild(style);

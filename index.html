@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PRIMARY SEO META TAGS -->
-    <title>Luanda Street || Simplifying Your Journey, Simplifying Your Needs</title>
+    <title>Luanda Street || Simplifying Your Journey, Serving Your Needs</title>
     <meta name="title" content="Luanda Street Cape Town | Business Hub - 13 Specialized Services Under One Roof">
     <meta name="description" content="Luanda Street in Cape Town: Your premier business hub offering 13 specialized services including Shuttle, Chauffeur, Immigration, Translation, DNA Testing & more. One stop for all your business needs in Cape Town.">
     <meta name="keywords" content="Luanda Street Cape Town, business hub Cape Town, shuttle service Cape Town, chauffeur Cape Town, immigration services Cape Town, translation services Cape Town, DNA testing Cape Town, business registration Cape Town, driving school Cape Town, tour guide Cape Town, import export Cape Town">
@@ -20,38 +20,44 @@
     
     <!-- OPEN GRAPH / SOCIAL MEDIA -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.luandastreet.co.za/">
+    <meta property="og:url" content="https://www.luandastreetcapetown.co.za/">
     <meta property="og:title" content="Luanda Street Cape Town - Your Premier Business Hub">
     <meta property="og:description" content="13 specialized businesses in Cape Town under one roof. From shuttle services to DNA testing, we've got you covered.">
     <meta property="og:image" content="images/logo.jpeg">
     
-    <!-- FAVICON - Using your logo.jpeg -->
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="images/logo.jpeg">
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+    <link rel="shortcut icon" href="images/logo.jpeg">
     <link rel="apple-touch-icon" href="images/logo.jpeg">
     <meta name="msapplication-TileImage" content="images/logo.jpeg">
     <meta name="msapplication-TileColor" content="#dc2626">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
     
-   <!-- Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-<!-- CSS -->
-<link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- TOP BAR -->
     <div class="top-bar">
         <div class="top-bar-content">
             <div class="top-bar-contact">
-                <span>📞 +27 21 123 4567</span>
-                <span>✉️ info@luandastreetcapetown.co.za</span>
-                <span>📍 Alice Street, Cape Town, 7456</span>
+                <span><a href="tel:+27624085715" style="color: white; text-decoration: none;">📞 +27 62 408 5715</a></span>
+                <span><a href="mailto:info@luandastreetcapetown.co.za" style="color: white; text-decoration: none;">✉️ info.luandastreet@gmail.com</a></span>
+                <span><a href="https://maps.google.com/?q+26+Alice+Street+Goodwood+Cape+Town" target="_blank" style="color: white; text-decoration: none;">📍 Alice Street, Cape Town, 7456</a></span>
             </div>
             <div class="top-bar-social">
-    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-</div>
+                <a href="https://facebook.com/luandastreet" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://linkedin.com/company/luandastreet" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -79,7 +85,7 @@
     <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero.jpeg');">
         <div class="cape-town-badge">📍 Proudly Based in Cape Town</div>
         <h1>Welcome to <span>Luanda Street</span></h1>
-        <p>WE SIMPLIFY YOUR JOURNERY & SIMPLIFY YOUR NEEDS</p>
+        <p>Simplifying Your Journey, Serving Your Needs</p>
         <div class="hero-location">📍 Goodwood, Cape Town</div>
         <div class="hero-buttons">
             <a href="#services" class="btn">Explore Our Services</a>
@@ -101,7 +107,7 @@
                 
                 <div class="about-highlight">
                     <p><strong>Why Choose Us in Cape Town?</strong><br>
-                    • Central Luanda Street location<br>
+                    • Central Alice Street location<br>
                     • 13 specialized services in one place<br>
                     • Cape Town-based team<br>
                     • Serving all Western Cape areas<br>
@@ -116,13 +122,20 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- SERVICES SECTION with Cape Town header image -->
     <section id="services" class="services-section">
         <div class="services-container">
             <div class="section-title">
                 <h2>Our Services in Cape Town</h2>
                 <p>13 specialized businesses serving the Cape Town community</p>
             </div>
+            
+            <!-- Cape Town header image -->
+            <div class="cape-town-header-image">
+                <img src="images/cape-town-services.jpeg" alt="Beautiful Cape Town" loading="lazy">
+                <div class="image-overlay-text">Serving the Mother City</div>
+            </div>
+            
             <div class="services-grid" id="servicesGrid">
                 <!-- Services will be populated by JavaScript -->
             </div>
@@ -145,7 +158,9 @@
                         <div class="contact-icon">📍</div>
                         <div class="contact-text">
                             <strong>Visit Us</strong>
-                            27 Alice Street, Goodwood, Cape Town, 7460, South Africa
+                            <a href="https://maps.google.com/?q=Alice+Street+Goodwood+Cape+Town" target="_blank" style="color: var(--text-secondary); text-decoration: none;">
+                                27 Alice Street, Goodwood, 7460
+                            </a>
                         </div>
                     </div>
                     
@@ -153,7 +168,7 @@
                         <div class="contact-icon">📞</div>
                         <div class="contact-text">
                             <strong>Call Us</strong>
-                            +27 21 123 4567
+                            <a href="tel:+27624085715" style="color: var(--text-secondary); text-decoration: none;">+27 62 408 5715</a>
                         </div>
                     </div>
                     
@@ -161,7 +176,7 @@
                         <div class="contact-icon">📧</div>
                         <div class="contact-text">
                             <strong>Email Us</strong>
-                            info@luandastreetcapetown.co.za
+                            <a href="mailto:info.luandastreet@gmail.com" style="color: var(--text-secondary); text-decoration: none;">info.luandastreet@gmail.com</a>
                         </div>
                     </div>
                     
@@ -177,7 +192,7 @@
                 </div>
             </div>
             
-            <form class="contact-form" action="https://formsubmit.co/info@luandastreetcapetown.co.za" method="POST">
+            <form class="contact-form" action="https://formsubmit.co/info.luandastreet@gmail.com" method="POST">
                 <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="New Contact Form Submission - Luanda Street Cape Town">
                 <input type="hidden" name="_template" value="box">
@@ -207,6 +222,12 @@
                 </div>
                 <button type="submit" class="btn">Send Message</button>
             </form>
+        </div>
+        
+        <!-- Cape Town image beneath contact form -->
+        <div class="cape-town-footer-image">
+            <img src="images/cape-town-beach.jpeg" alt="Cape Town Beach">
+            <div class="image-caption">Experience the beauty of Cape Town</div>
         </div>
     </section>
 
@@ -238,13 +259,13 @@
             
             <div class="footer-section">
                 <h3>Find Us</h3>
-                <p>27 Alice Street, Goodwood<br>Cape Town, 7460<br>South Africa</p>
-                <p>📞 +27 21 123 4567<br>✉️ info@luandastreetcapetown.co.za</p>
+                <p>26 Alice Street, Goodwood<br>Cape Town, 7456<br>South Africa</p>
+                <p>📞 <a href="tel:+27624085715" style="color: white; text-decoration: none;">+27 62 408 5715</a><br>✉️ <a href="mailto:info.luandastreet@gmail.com" style="color: white; text-decoration: none;">info.luandastreet@gmail.com</a></p>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 Luanda Street. All rights reserved. | Serving the community</p>
+            <p>&copy; 2024 Luanda Street Cape Town Business Hub. All rights reserved. | Serving the Cape Town community since 2024</p>
 			<p>Designed by DynaFrame Studios</p>
         </div>
     </footer>
