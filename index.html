@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
     
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -46,9 +46,9 @@
     <div class="top-bar">
         <div class="top-bar-content">
             <div class="top-bar-contact">
-                <span><a href="tel:+27624085715" style="color: white; text-decoration: none;">📞 +27 62 408 5715</a></span>
-                <span><a href="mailto:info@luandastreetcapetown.co.za" style="color: white; text-decoration: none;">✉️ info.luandastreet@gmail.com</a></span>
-                <span><a href="https://maps.google.com/?q+26+Alice+Street+Goodwood+Cape+Town" target="_blank" style="color: white; text-decoration: none;">📍 Alice Street, Cape Town, 7456</a></span>
+                <span><a href="tel:+27624085715" style="color: white; text-decoration: none;"><i class="fa-solid fa-phone"></i> +27 62 408 5715</a></span>
+                <span><a href="mailto:info.luandastreet@gmail.com" style="color: white; text-decoration: none;"><i class="fa-solid fa-envelope"></i> info.luandastreet@gmail.com</a></span>
+                <span><a href="https://maps.google.com/?q=26+Alice+Street+Goodwood+Cape+Town" target="_blank" style="color: white; text-decoration: none;"><i class="fa-solid fa-location-dot"></i> 26 Alice Street, Goodwood, 7456</a></span>
             </div>
             <div class="top-bar-social">
                 <a href="https://facebook.com/luandastreet" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -71,7 +71,7 @@
                     <span>FAST.TRUST.CONVENIENT</span>
                 </div>
             </a>
-            <div class="menu-toggle" id="menuToggle">☰</div>
+            <div class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -83,13 +83,13 @@
 
     <!-- HOME SECTION with hero.jpeg -->
     <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero.jpeg');">
-        <div class="cape-town-badge">📍 Proudly Based in Cape Town</div>
+        <div class="cape-town-badge"><i class="fa-solid fa-location-dot"></i> Proudly Based in Cape Town</div>
         <h1>Welcome to <span>Luanda Street</span></h1>
         <p>Simplifying Your Journey, Serving Your Needs</p>
-        <div class="hero-location">📍 Goodwood, Cape Town</div>
+        <div class="hero-location"><i class="fa-solid fa-map-pin"></i> Goodwood, Cape Town</div>
         <div class="hero-buttons">
-            <a href="#services" class="btn">Explore Our Services</a>
-            <a href="#contact" class="btn btn-outline">Get Directions</a>
+            <a href="#services" class="btn">Explore Our Services <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
         </div>
     </section>
 
@@ -106,15 +106,17 @@
                 <p>From the bustling CBD to the surrounding suburbs, we serve clients from across the Western Cape with professional, reliable services that you can trust.</p>
                 
                 <div class="about-highlight">
-                    <p><strong>Why Choose Us in Cape Town?</strong><br>
-                    • Central Alice Street location<br>
-                    • 13 specialized services in one place<br>
-                    • Cape Town-based team<br>
-                    • Serving all Western Cape areas<br>
-                    • Multi-lingual staff (English, Afrikaans, Xhosa)</p>
+                    <p><strong>Why Choose Us in Cape Town?</strong></p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Central Alice Street location</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 13 specialized services in one place</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Cape Town-based team</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Serving all Western Cape areas</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Multi-lingual staff (English, Afrikaans, Xhosa)</li>
+                    </ul>
                 </div>
                 
-                <a href="#contact" class="btn" style="margin-top: 20px;">Visit Us in Cape Town</a>
+                <a href="#contact" class="btn" style="margin-top: 20px;"><i class="fa-solid fa-location-arrow"></i> Visit Us in Cape Town</a>
             </div>
             <div class="about-image">
                 <img src="images/logo.jpeg" alt="Luanda Street Office" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
@@ -155,17 +157,17 @@
                 
                 <div class="contact-details">
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-text">
                             <strong>Visit Us</strong>
-                            <a href="https://maps.google.com/?q=Alice+Street+Goodwood+Cape+Town" target="_blank" style="color: var(--text-secondary); text-decoration: none;">
-                                27 Alice Street, Goodwood, 7460
+                            <a href="https://maps.google.com/?q=26+Alice+Street+Goodwood+Cape+Town" target="_blank" style="color: var(--text-secondary); text-decoration: none;">
+                                26 Alice Street, Goodwood, 7456
                             </a>
                         </div>
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
                         <div class="contact-text">
                             <strong>Call Us</strong>
                             <a href="tel:+27624085715" style="color: var(--text-secondary); text-decoration: none;">+27 62 408 5715</a>
@@ -173,7 +175,7 @@
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">📧</div>
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                         <div class="contact-text">
                             <strong>Email Us</strong>
                             <a href="mailto:info.luandastreet@gmail.com" style="color: var(--text-secondary); text-decoration: none;">info.luandastreet@gmail.com</a>
@@ -181,7 +183,7 @@
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
+                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
                         <div class="contact-text">
                             <strong>Business Hours</strong>
                             Mon-Fri: 8:00 - 18:00<br>
@@ -220,7 +222,7 @@
                 <div class="form-group">
                     <textarea name="message" placeholder="Your Message" required></textarea>
                 </div>
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
             </form>
         </div>
         
@@ -237,7 +239,7 @@
             <div class="footer-section">
                 <h3>Luanda Street</h3>
                 <p>Cape Town's premier business hub offering 13 specialized services under one roof. Your one-stop destination for professional services in the heart of Cape Town.</p>
-                <div class="cape-town-badge" style="margin-top: 15px;">🇿🇦 Proudly Cape Town</div>
+                <div class="cape-town-badge" style="margin-top: 15px;"><i class="fa-solid fa-location-dot"></i> Proudly Cape Town</div>
             </div>
             
             <div class="footer-section">
@@ -260,13 +262,13 @@
             <div class="footer-section">
                 <h3>Find Us</h3>
                 <p>26 Alice Street, Goodwood<br>Cape Town, 7456<br>South Africa</p>
-                <p>📞 <a href="tel:+27624085715" style="color: white; text-decoration: none;">+27 62 408 5715</a><br>✉️ <a href="mailto:info.luandastreet@gmail.com" style="color: white; text-decoration: none;">info.luandastreet@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+27624085715" style="color: white; text-decoration: none;">+27 62 408 5715</a><br><i class="fa-solid fa-envelope"></i> <a href="mailto:info.luandastreet@gmail.com" style="color: white; text-decoration: none;">info.luandastreet@gmail.com</a></p>
             </div>
         </div>
         
         <div class="footer-bottom">
             <p>&copy; 2024 Luanda Street Cape Town Business Hub. All rights reserved. | Serving the Cape Town community since 2024</p>
-			<p>Designed by DynaFrame Studios</p>
+			<p>Designed by <a href="https://dynaframestudios.co.za/web-design" target="_blank" rel="noopener" class="designer-link">DynaFrame Studios</a></p>
         </div>
     </footer>
 

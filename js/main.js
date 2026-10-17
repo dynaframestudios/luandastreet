@@ -1,7 +1,7 @@
 // Services Data
 const servicesData = [
     {
-        icon: '🚐',
+        icon: '<i class="fa-solid fa-van-shuttle"></i>',
         title: 'Shuttle Services',
         description: 'Reliable transportation across Cape Town',
         badge: 'Cape Town Wide',
@@ -17,7 +17,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🚗',
+        icon: '<i class="fa-solid fa-car-side"></i>',
         title: 'Chauffeur Service',
         description: 'Luxury chauffeur services in Cape Town',
         badge: 'Premium Service',
@@ -33,7 +33,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🎭',
+        icon: '<i class="fa-solid fa-champagne-glasses"></i>',
         title: 'Hospitality & Entertainment',
         description: 'Cape Town\'s finest entertainment services',
         badge: 'Events',
@@ -49,7 +49,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🏨',
+        icon: '<i class="fa-solid fa-hotel"></i>',
         title: 'Accommodation',
         description: 'Find your perfect stay in Cape Town',
         badge: 'Booking',
@@ -65,7 +65,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🛂',
+        icon: '<i class="fa-solid fa-passport"></i>',
         title: 'Immigration Services',
         description: 'Visas, permits & more in Cape Town',
         badge: 'Home Affairs',
@@ -82,7 +82,7 @@ const servicesData = [
         }
     },
     {
-        icon: '💰',
+        icon: '<i class="fa-solid fa-money-bill-transfer"></i>',
         title: 'Money Transfer Assistance',
         description: 'Secure money transfers in Cape Town',
         badge: 'Financial',
@@ -98,7 +98,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🗺️',
+        icon: '<i class="fa-solid fa-map-location-dot"></i>',
         title: 'Tour Guide Services',
         description: 'Explore Cape Town with expert guides',
         badge: 'Tours',
@@ -115,7 +115,7 @@ const servicesData = [
         }
     },
     {
-        icon: '📦',
+        icon: '<i class="fa-solid fa-boxes-packing"></i>',
         title: 'Import & Export of Goods',
         description: 'International trade assistance in Cape Town',
         badge: 'Trade',
@@ -131,7 +131,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🎓',
+        icon: '<i class="fa-solid fa-graduation-cap"></i>',
         title: 'Academics & Qualifications',
         description: 'SAQA, foreign qualifications & more',
         badge: 'Education',
@@ -147,7 +147,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🌐',
+        icon: '<i class="fa-solid fa-language"></i>',
         title: 'Translation Services',
         description: 'Day-to-day translation assistance in Cape Town',
         badge: 'Language',
@@ -164,7 +164,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🚘',
+        icon: '<i class="fa-solid fa-car"></i>',
         title: 'Driving Academy',
         description: 'Car hire & driving lessons in Cape Town',
         badge: 'Driving',
@@ -180,7 +180,7 @@ const servicesData = [
         }
     },
     {
-        icon: '📋',
+        icon: '<i class="fa-solid fa-building-columns"></i>',
         title: 'Business Registration & More',
         description: 'Start your business in Cape Town',
         badge: 'Business',
@@ -197,7 +197,7 @@ const servicesData = [
         }
     },
     {
-        icon: '🧬',
+        icon: '<i class="fa-solid fa-dna"></i>',
         title: 'DNA Sample Collector',
         description: 'DNA testing & drug test services in Cape Town',
         badge: 'Medical',
@@ -376,7 +376,7 @@ function setupEventListeners() {
     const mapLinks = document.querySelectorAll('.contact-item .contact-text');
     for (let i = 0; i < mapLinks.length; i++) {
         mapLinks[i].addEventListener('click', function() {
-            window.open('https://maps.google.com/?q=Luanda+Street+Cape+Town', '_blank');
+            window.open('https://maps.google.com/?q=26+Alice+Street+Goodwood+Cape+Town', '_blank');
         });
         mapLinks[i].style.cursor = 'pointer';
     }
@@ -434,6 +434,6 @@ function updateCopyrightYear() {
     const footerText = document.querySelector('.footer-bottom p');
     if (footerText) {
         const currentYear = new Date().getFullYear();
-        footerText.innerHTML = footerText.innerHTML.replace('2024', currentYear);
+        footerText.innerHTML = footerText.innerHTML.replace(/©\s*2024/, '© ' + currentYear);
     }
 }
